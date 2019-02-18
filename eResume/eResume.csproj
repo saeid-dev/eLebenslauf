@@ -82,6 +82,7 @@
     <Compile Include="Honor.cs">
       <DependentUpon>SampleDB.tt</DependentUpon>
     </Compile>
+    <Compile Include="infrastruktur\Myclass.cs" />
     <Compile Include="Interest.cs">
       <DependentUpon>SampleDB.tt</DependentUpon>
     </Compile>

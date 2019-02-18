@@ -1,0 +1,285 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="SampleDBStoreContainer" CdmEntityContainer="SampleDBContainer">
+    <EntitySetMapping Name="DegreeSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Degree)">
+        <MappingFragment StoreEntitySet="DegreeSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EducationSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Education)">
+        <MappingFragment StoreEntitySet="EducationSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="FieldOfStudy" ColumnName="FieldOfStudy" />
+          <ScalarProperty Name="Location" ColumnName="Location" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="Dissertation" ColumnName="Dissertation" />
+          <ScalarProperty Name="ShortDesc" ColumnName="ShortDesc" />
+          <ScalarProperty Name="AutorID" ColumnName="AutorID" />
+          <ScalarProperty Name="DegreeID" ColumnName="DegreeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="AuthorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Author)">
+        <MappingFragment StoreEntitySet="AuthorSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Family" ColumnName="Family" />
+          <ScalarProperty Name="BirthDate" ColumnName="BirthDate" />
+          <ScalarProperty Name="Residency" ColumnName="Residency" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="Cellphone" ColumnName="Cellphone" />
+          <ScalarProperty Name="Email" ColumnName="Email" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ArticleSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Article)">
+        <MappingFragment StoreEntitySet="ArticleSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+          <ScalarProperty Name="ShortDesc" ColumnName="ShortDesc" />
+          <ScalarProperty Name="PublishDate" ColumnName="PublishDate" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="IsArchived" ColumnName="IsArchived" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="TagSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Tag)">
+        <MappingFragment StoreEntitySet="TagSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CommentSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Comment)">
+        <MappingFragment StoreEntitySet="CommentSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Sender" ColumnName="Sender" />
+          <ScalarProperty Name="Message" ColumnName="Message" />
+          <ScalarProperty Name="Visible" ColumnName="Visible" />
+          <ScalarProperty Name="ArticleID" ColumnName="ArticleID" />
+          <ScalarProperty Name="CommentID" ColumnName="CommentID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="CertificateSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Certificate)">
+        <MappingFragment StoreEntitySet="CertificateSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+          <ScalarProperty Name="Grade" ColumnName="Grade" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkillSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Skill)">
+        <MappingFragment StoreEntitySet="SkillSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Value" ColumnName="Value" />
+          <ScalarProperty Name="ExpertiselD" ColumnName="ExpertiselD" />
+          <ScalarProperty Name="LevelID" ColumnName="LevelID" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="JobSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Job)">
+        <MappingFragment StoreEntitySet="JobSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Position" ColumnName="Position" />
+          <ScalarProperty Name="ShortDesc" ColumnName="ShortDesc" />
+          <ScalarProperty Name="StartDate" ColumnName="StartDate" />
+          <ScalarProperty Name="EndDate" ColumnName="EndDate" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+          <ScalarProperty Name="EmployerID" ColumnName="EmployerID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="EmployerSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Employer)">
+        <MappingFragment StoreEntitySet="EmployerSet">
+          <ScalarProperty Name="Id" ColumnName="Id" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="HonorSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Honor)">
+        <MappingFragment StoreEntitySet="HonorSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="GainDate" ColumnName="GainDate" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExperienceSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Experience)">
+        <MappingFragment StoreEntitySet="ExperienceSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+          <ScalarProperty Name="Subject" ColumnName="Subject" />
+          <ScalarProperty Name="ShortDesc" ColumnName="ShortDesc" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="InterestSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Interest)">
+        <MappingFragment StoreEntitySet="InterestSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Description" ColumnName="Description" />
+          <ScalarProperty Name="AuthorID" ColumnName="AuthorID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ExpertiseSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.Expertise)">
+        <MappingFragment StoreEntitySet="ExpertiseSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SkillLevelSet">
+      <EntityTypeMapping TypeName="IsTypeOf(SampleDB.SkillLevel)">
+        <MappingFragment StoreEntitySet="SkillLevelSet">
+          <ScalarProperty Name="ID" ColumnName="ID" />
+          <ScalarProperty Name="Titel" ColumnName="Titel" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <AssociationSetMapping Name="AuthorEducation" TypeName="SampleDB.AuthorEducation" StoreEntitySet="EducationSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Education">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="DegreeEducation" TypeName="SampleDB.DegreeEducation" StoreEntitySet="EducationSet">
+      <EndProperty Name="Degree">
+        <ScalarProperty Name="ID" ColumnName="Degree_ID" />
+      </EndProperty>
+      <EndProperty Name="Education">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorArticle" TypeName="SampleDB.AuthorArticle" StoreEntitySet="ArticleSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Article">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticleComment" TypeName="SampleDB.ArticleComment" StoreEntitySet="CommentSet">
+      <EndProperty Name="Article">
+        <ScalarProperty Name="ID" ColumnName="Article_ID" />
+      </EndProperty>
+      <EndProperty Name="Comment">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="CommentComment" TypeName="SampleDB.CommentComment" StoreEntitySet="CommentSet">
+      <EndProperty Name="Comment">
+        <ScalarProperty Name="ID" ColumnName="SuperComment_ID" />
+      </EndProperty>
+      <EndProperty Name="Comment1">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorCertificate" TypeName="SampleDB.AuthorCertificate" StoreEntitySet="CertificateSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Certificate">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorSkill" TypeName="SampleDB.AuthorSkill" StoreEntitySet="SkillSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Skill">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorJob" TypeName="SampleDB.AuthorJob" StoreEntitySet="JobSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Job">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="EmployerJob" TypeName="SampleDB.EmployerJob" StoreEntitySet="JobSet">
+      <EndProperty Name="Employer">
+        <ScalarProperty Name="Id" ColumnName="Employer_Id" />
+      </EndProperty>
+      <EndProperty Name="Job">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorHonor" TypeName="SampleDB.AuthorHonor" StoreEntitySet="HonorSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Honor">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorExperience" TypeName="SampleDB.AuthorExperience" StoreEntitySet="ExperienceSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Experience">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="AuthorInterest" TypeName="SampleDB.AuthorInterest" StoreEntitySet="InterestSet">
+      <EndProperty Name="Author">
+        <ScalarProperty Name="ID" ColumnName="Author_ID" />
+      </EndProperty>
+      <EndProperty Name="Interest">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ExpertiseSkill" TypeName="SampleDB.ExpertiseSkill" StoreEntitySet="SkillSet">
+      <EndProperty Name="Expertise">
+        <ScalarProperty Name="ID" ColumnName="Expertise_ID" />
+      </EndProperty>
+      <EndProperty Name="Skill">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="SkillLevelSkill" TypeName="SampleDB.SkillLevelSkill" StoreEntitySet="SkillSet">
+      <EndProperty Name="SkillLevel">
+        <ScalarProperty Name="ID" ColumnName="Level_ID" />
+      </EndProperty>
+      <EndProperty Name="Skill">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+    <AssociationSetMapping Name="ArticleTag" TypeName="SampleDB.ArticleTag" StoreEntitySet="TagSet">
+      <EndProperty Name="Article">
+        <ScalarProperty Name="ID" ColumnName="Article_ID" />
+      </EndProperty>
+      <EndProperty Name="Tag">
+        <ScalarProperty Name="ID" ColumnName="ID" />
+      </EndProperty>
+    </AssociationSetMapping>
+  </EntityContainerMapping>
+</Mapping>
