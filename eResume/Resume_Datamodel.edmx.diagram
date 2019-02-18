@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="cfbf0c3a1ce748a2b28bc21364863f44" Name="Diagram1" ZoomLevel="85" DisplayType="false" >
+        <EntityTypeShape EntityType="SampleDB.Degree" Width="1.5" PointX="0.5" PointY="0.5" />
+        <EntityTypeShape EntityType="SampleDB.Education" Width="1.5" PointX="2.625" PointY="0.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="SampleDB.Author" Width="1.5" PointX="4.875" PointY="2.5" />
+        <AssociationConnector Association="SampleDB.AuthorEducation" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SampleDB.Article" Width="1.5" PointX="7" PointY="0.5" />
+        <AssociationConnector Association="SampleDB.DegreeEducation" />
+        <AssociationConnector Association="SampleDB.AuthorArticle" />
+        <EntityTypeShape EntityType="SampleDB.Tag" Width="1.5" PointX="4.875" PointY="0.5" />
+        <EntityTypeShape EntityType="SampleDB.Comment" Width="1.5" PointX="9.125" PointY="0.5" />
+        <AssociationConnector Association="SampleDB.ArticleComment" />
+        <AssociationConnector Association="SampleDB.CommentComment" />
+        <EntityTypeShape EntityType="SampleDB.Certificate" Width="1.5" PointX="2.625" PointY="4.875" />
+        <AssociationConnector Association="SampleDB.AuthorCertificate" />
+        <EntityTypeShape EntityType="SampleDB.Skill" Width="1.5" PointX="7" PointY="4.375" />
+        <AssociationConnector Association="SampleDB.AuthorSkill" />
+        <EntityTypeShape EntityType="SampleDB.Job" Width="1.5" PointX="4.875" PointY="6.875" />
+        <EntityTypeShape EntityType="SampleDB.Employer" Width="1.5" PointX="6.875" PointY="8" />
+        <AssociationConnector Association="SampleDB.AuthorJob" />
+        <AssociationConnector Association="SampleDB.EmployerJob" />
+        <EntityTypeShape EntityType="SampleDB.Honor" Width="1.5" PointX="2.625" PointY="7.625" />
+        <AssociationConnector Association="SampleDB.AuthorHonor" ManuallyRouted="false" >
+        </AssociationConnector>
+        <EntityTypeShape EntityType="SampleDB.Experience" Width="1.5" PointX="0.5" PointY="2.75" />
+        <AssociationConnector Association="SampleDB.AuthorExperience" />
+        <EntityTypeShape EntityType="SampleDB.Interest" Width="1.5" PointX="0.5" PointY="5.5" />
+        <AssociationConnector Association="SampleDB.AuthorInterest" />
+        <EntityTypeShape EntityType="SampleDB.Expertise" Width="1.5" PointX="9.125" PointY="3.875" />
+        <AssociationConnector Association="SampleDB.ExpertiseSkill" />
+        <EntityTypeShape EntityType="SampleDB.SkillLevel" Width="1.5" PointX="9.125" PointY="6" />
+        <AssociationConnector Association="SampleDB.SkillLevelSkill" />
+        <AssociationConnector Association="SampleDB.ArticleTag" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

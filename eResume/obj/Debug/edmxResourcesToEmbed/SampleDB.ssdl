@@ -1,0 +1,420 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="SampleDB.Store" Alias="Self" Provider="System.Data.SqlClient" ProviderManifestToken="2012" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityContainer Name="SampleDBStoreContainer">
+    <EntitySet Name="DegreeSet" EntityType="SampleDB.Store.DegreeSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EducationSet" EntityType="SampleDB.Store.EducationSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="AuthorSet" EntityType="SampleDB.Store.AuthorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ArticleSet" EntityType="SampleDB.Store.ArticleSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="TagSet" EntityType="SampleDB.Store.TagSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CommentSet" EntityType="SampleDB.Store.CommentSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="CertificateSet" EntityType="SampleDB.Store.CertificateSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SkillSet" EntityType="SampleDB.Store.SkillSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="JobSet" EntityType="SampleDB.Store.JobSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="EmployerSet" EntityType="SampleDB.Store.EmployerSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="HonorSet" EntityType="SampleDB.Store.HonorSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExperienceSet" EntityType="SampleDB.Store.ExperienceSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="InterestSet" EntityType="SampleDB.Store.InterestSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="ExpertiseSet" EntityType="SampleDB.Store.ExpertiseSet" store:Type="Tables" Schema="dbo" />
+    <EntitySet Name="SkillLevelSet" EntityType="SampleDB.Store.SkillLevelSet" store:Type="Tables" Schema="dbo" />
+    <AssociationSet Name="AuthorEducation" Association="SampleDB.Store.AuthorEducation">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Education" EntitySet="EducationSet" />
+    </AssociationSet>
+    <AssociationSet Name="DegreeEducation" Association="SampleDB.Store.DegreeEducation">
+      <End Role="Degree" EntitySet="DegreeSet" />
+      <End Role="Education" EntitySet="EducationSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorArticle" Association="SampleDB.Store.AuthorArticle">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Article" EntitySet="ArticleSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleComment" Association="SampleDB.Store.ArticleComment">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Comment" EntitySet="CommentSet" />
+    </AssociationSet>
+    <AssociationSet Name="CommentComment" Association="SampleDB.Store.CommentComment">
+      <End Role="Comment" EntitySet="CommentSet" />
+      <End Role="Comment1" EntitySet="CommentSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorCertificate" Association="SampleDB.Store.AuthorCertificate">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Certificate" EntitySet="CertificateSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorSkill" Association="SampleDB.Store.AuthorSkill">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Skill" EntitySet="SkillSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorJob" Association="SampleDB.Store.AuthorJob">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Job" EntitySet="JobSet" />
+    </AssociationSet>
+    <AssociationSet Name="EmployerJob" Association="SampleDB.Store.EmployerJob">
+      <End Role="Employer" EntitySet="EmployerSet" />
+      <End Role="Job" EntitySet="JobSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorHonor" Association="SampleDB.Store.AuthorHonor">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Honor" EntitySet="HonorSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorExperience" Association="SampleDB.Store.AuthorExperience">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Experience" EntitySet="ExperienceSet" />
+    </AssociationSet>
+    <AssociationSet Name="AuthorInterest" Association="SampleDB.Store.AuthorInterest">
+      <End Role="Author" EntitySet="AuthorSet" />
+      <End Role="Interest" EntitySet="InterestSet" />
+    </AssociationSet>
+    <AssociationSet Name="ExpertiseSkill" Association="SampleDB.Store.ExpertiseSkill">
+      <End Role="Expertise" EntitySet="ExpertiseSet" />
+      <End Role="Skill" EntitySet="SkillSet" />
+    </AssociationSet>
+    <AssociationSet Name="SkillLevelSkill" Association="SampleDB.Store.SkillLevelSkill">
+      <End Role="SkillLevel" EntitySet="SkillLevelSet" />
+      <End Role="Skill" EntitySet="SkillSet" />
+    </AssociationSet>
+    <AssociationSet Name="ArticleTag" Association="SampleDB.Store.ArticleTag">
+      <End Role="Article" EntitySet="ArticleSet" />
+      <End Role="Tag" EntitySet="TagSet" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="DegreeSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titel" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EducationSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="FieldOfStudy" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Location" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="true" />
+    <Property Name="Grade" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Dissertation" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShortDesc" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AutorID" Type="int" Nullable="false" />
+    <Property Name="DegreeID" Type="int" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+    <Property Name="Degree_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="AuthorSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Family" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="BirthDate" Type="datetime" Nullable="true" />
+    <Property Name="Residency" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Phone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Cellphone" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="Email" Type="nvarchar(max)" Nullable="true" />
+  </EntityType>
+  <EntityType Name="ArticleSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShortDesc" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="PublishDate" Type="datetime" Nullable="false" />
+    <Property Name="Visible" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="IsArchived" Type="bit" Nullable="false" />
+    <Property Name="AuthorID" Type="int" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="TagSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ArticleID" Type="int" Nullable="false" />
+    <Property Name="Article_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CommentSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Sender" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Message" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Visible" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ArticleID" Type="int" Nullable="false" />
+    <Property Name="CommentID" Type="int" Nullable="false" />
+    <Property Name="Article_ID" Type="int" Nullable="false" />
+    <Property Name="SuperComment_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="CertificateSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Grade" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AuthorID" Type="int" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SkillSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Value" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ExpertiselD" Type="int" Nullable="false" />
+    <Property Name="LevelID" Type="int" Nullable="false" />
+    <Property Name="AuthorID" Type="int" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+    <Property Name="Expertise_ID" Type="int" Nullable="false" />
+    <Property Name="Level_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="JobSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Position" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="ShortDesc" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="StartDate" Type="datetime" Nullable="false" />
+    <Property Name="EndDate" Type="datetime" Nullable="true" />
+    <Property Name="AuthorID" Type="int" Nullable="false" />
+    <Property Name="EmployerID" Type="int" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+    <Property Name="Employer_Id" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="EmployerSet">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Name" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="HonorSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="GainDate" Type="datetime" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AuthorID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExperienceSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titel" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Subject" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="ShortDesc" Type="nvarchar(max)" Nullable="true" />
+    <Property Name="AuthorID" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="InterestSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Description" Type="nvarchar(max)" Nullable="false" />
+    <Property Name="AuthorID" Type="int" Nullable="false" />
+    <Property Name="Author_ID" Type="int" Nullable="false" />
+  </EntityType>
+  <EntityType Name="ExpertiseSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titel" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <EntityType Name="SkillLevelSet">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="Titel" Type="nvarchar(max)" Nullable="false" />
+  </EntityType>
+  <Association Name="AuthorEducation">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Education" Type="SampleDB.Store.EducationSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Education">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="DegreeEducation">
+    <End Role="Degree" Type="SampleDB.Store.DegreeSet" Multiplicity="1" />
+    <End Role="Education" Type="SampleDB.Store.EducationSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Degree">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Education">
+        <PropertyRef Name="Degree_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorArticle">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Article" Type="SampleDB.Store.ArticleSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Article">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticleComment">
+    <End Role="Article" Type="SampleDB.Store.ArticleSet" Multiplicity="1" />
+    <End Role="Comment" Type="SampleDB.Store.CommentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comment">
+        <PropertyRef Name="Article_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="CommentComment">
+    <End Role="Comment" Type="SampleDB.Store.CommentSet" Multiplicity="1" />
+    <End Role="Comment1" Type="SampleDB.Store.CommentSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Comment">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Comment1">
+        <PropertyRef Name="SuperComment_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorCertificate">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Certificate" Type="SampleDB.Store.CertificateSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Certificate">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorSkill">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Skill" Type="SampleDB.Store.SkillSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Skill">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorJob">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Job" Type="SampleDB.Store.JobSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="EmployerJob">
+    <End Role="Employer" Type="SampleDB.Store.EmployerSet" Multiplicity="1" />
+    <End Role="Job" Type="SampleDB.Store.JobSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employer">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Job">
+        <PropertyRef Name="Employer_Id" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorHonor">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Honor" Type="SampleDB.Store.HonorSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Honor">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorExperience">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Experience" Type="SampleDB.Store.ExperienceSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Experience">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="AuthorInterest">
+    <End Role="Author" Type="SampleDB.Store.AuthorSet" Multiplicity="1" />
+    <End Role="Interest" Type="SampleDB.Store.InterestSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Author">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Interest">
+        <PropertyRef Name="Author_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ExpertiseSkill">
+    <End Role="Expertise" Type="SampleDB.Store.ExpertiseSet" Multiplicity="1" />
+    <End Role="Skill" Type="SampleDB.Store.SkillSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Expertise">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Skill">
+        <PropertyRef Name="Expertise_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SkillLevelSkill">
+    <End Role="SkillLevel" Type="SampleDB.Store.SkillLevelSet" Multiplicity="1" />
+    <End Role="Skill" Type="SampleDB.Store.SkillSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SkillLevel">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Skill">
+        <PropertyRef Name="Level_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="ArticleTag">
+    <End Role="Article" Type="SampleDB.Store.ArticleSet" Multiplicity="1" />
+    <End Role="Tag" Type="SampleDB.Store.TagSet" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Article">
+        <PropertyRef Name="ID" />
+      </Principal>
+      <Dependent Role="Tag">
+        <PropertyRef Name="Article_ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

@@ -1,0 +1,13 @@
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\eResume.exe.config
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\eResume.exe
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\eResume.pdb
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\EntityFramework.dll
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\EntityFramework.xml
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\Saman\source\repos\eResume\eResume\bin\Debug\de\EntityFramework.resources.dll
+C:\Users\Saman\source\repos\eResume\eResume\obj\Debug\eResume.csprojAssemblyReference.cache
+C:\Users\Saman\source\repos\eResume\eResume\obj\Debug\eResume.csproj.CoreCompileInputs.cache
+C:\Users\Saman\source\repos\eResume\eResume\obj\Debug\eResume.csproj.CopyComplete
+C:\Users\Saman\source\repos\eResume\eResume\obj\Debug\eResume.exe
+C:\Users\Saman\source\repos\eResume\eResume\obj\Debug\eResume.pdb
